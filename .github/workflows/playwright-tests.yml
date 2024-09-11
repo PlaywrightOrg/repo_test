@@ -47,3 +47,9 @@ jobs:
         with:
           name: playwright-videos
           path: videos/
+
+      - name: Deploy report to GitHub Pages
+        if: always()
+        run: |
+          npm install -g gh-pages
+          gh-pages -d public/playwright-report
