@@ -48,12 +48,10 @@ jobs:
           name: playwright-videos
           path: videos/
 
-      - name: Deploy report to GitHub Pages
-        if: always()
-        run: |
-          npm install -g gh-pages
-          git config --global user.email "pazclaudia19@gmail.com"
-          git config --global user.name "Paz Claudia"
-          gh-pages -d public/playwright-report
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Deploy report to GitHub Pages
+      #   if: always()
+      #   run: |
+      #     npm install -g gh-pages
+      #     gh-pages -d public/playwright-report
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
