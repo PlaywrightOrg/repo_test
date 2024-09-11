@@ -1,14 +1,24 @@
 {
-  "name": "playwright_bootcamp_typescript",
+  "name": "playwrighttypescript",
   "version": "1.0.0",
-  "description": "playwright_bootcamp_typescript",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:dev": "cross-env ENV=dev npx playwright test --config=env/playwright.dev.config.ts",
+    "test:dev-ui": "cross-env ENV=dev npx playwright test --config=env/playwright.dev.config.ts --ui",
+    "test:staging": "cross-env ENV=stg npx playwright test --config=env/playwright.staging.config.ts",
+    "test:staging-ui": "cross-env ENV=stg npx playwright test --config=env/playwright.staging.config.ts --ui",
+    "test:prod": "cross-env ENV=prod npx playwright test --config=env/playwright.prod.config.ts",
+    "test:prod-ui": "cross-env ENV=prod npx playwright test --config=env/playwright.prod.config.ts --ui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.46.0",
-    "@types/node": "^22.2.0"
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^22.0.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
