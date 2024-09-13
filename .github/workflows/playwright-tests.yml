@@ -1,6 +1,8 @@
 name: Playwright Tests
 
 on:
+  schedule:
+    - cron: '0 8 * * *'
   push:
     branches:
       - dev
@@ -11,8 +13,6 @@ on:
       - dev
       - staging
       - prod
-  schedule:
-    - cron: '0 8 * * *'
 
 jobs:
   test:
